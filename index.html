@@ -99,15 +99,8 @@
         <button class="filter-tab" data-filter="writing">Writing</button>
         <button class="filter-tab" data-filter="directing">Directing & Events</button>
       </div>
-      <div class="portfolio-grid">
-        <div class="port-card fade-in" data-cat="programming"><div class="port-thumb"><img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=500&q=80" alt=""/><div class="port-overlay"><span class="port-cat-badge">Programming</span></div></div><div class="port-body"><div class="port-title">Neura — AI Analytics Dashboard</div><div class="port-desc">A full-stack Python + React dashboard that visualizes ML model outputs in real-time with interactive charts and anomaly detection.</div><div class="port-tags"><span class="port-tag">Python</span><span class="port-tag">React</span><span class="port-tag">FastAPI</span><span class="port-tag">TensorFlow</span></div></div></div>
-        <div class="port-card fade-in fade-in-delay-1" data-cat="programming"><div class="port-thumb"><img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=500&q=80" alt=""/><div class="port-overlay"><span class="port-cat-badge">Programming</span></div></div><div class="port-body"><div class="port-title">Orbit — Task Management App</div><div class="port-desc">A minimalist productivity web app with drag-and-drop kanban boards, real-time sync via WebSockets, and AI-powered task suggestions.</div><div class="port-tags"><span class="port-tag">TypeScript</span><span class="port-tag">Node.js</span><span class="port-tag">PostgreSQL</span></div></div></div>
-        <div class="port-card fade-in fade-in-delay-2" data-cat="programming"><div class="port-thumb"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=80" alt=""/><div class="port-overlay"><span class="port-cat-badge">Programming</span></div></div><div class="port-body"><div class="port-title">AutoScript — Python Automation Suite</div><div class="port-desc">A collection of Python scripts for web scraping, data processing, and workflow automation deployed on a self-hosted VPS.</div><div class="port-tags"><span class="port-tag">Python</span><span class="port-tag">Selenium</span><span class="port-tag">Docker</span></div></div></div>
-        <div class="port-card fade-in" data-cat="writing"><div class="port-thumb"><img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=500&q=80" alt=""/><div class="port-overlay"><span class="port-cat-badge">Writing</span></div></div><div class="port-body"><div class="port-title">Echoes of the Shattered Sky — Vol. 1</div><div class="port-desc">A high-fantasy light novel following a disgraced war oracle who discovers the gods are fabricated constructs of a dying universe.</div><div class="port-tags"><span class="port-tag">Light Novel</span><span class="port-tag">Fantasy</span><span class="port-tag">Sci-fi</span></div></div></div>
-        <div class="port-card fade-in fade-in-delay-1" data-cat="writing"><div class="port-thumb"><img src="https://images.unsplash.com/photo-1519791883288-dc8bd696e667?w=500&q=80" alt=""/><div class="port-overlay"><span class="port-cat-badge">Writing</span></div></div><div class="port-body"><div class="port-title">The Velanthar Chronicles — World Bible</div><div class="port-desc">A 200-page world-building document covering the lore, magic systems, political factions, and languages of the Velanthar universe.</div><div class="port-tags"><span class="port-tag">World Building</span><span class="port-tag">Lore Design</span></div></div></div>
-        <div class="port-card fade-in" data-cat="directing"><div class="port-thumb"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=500&q=80" alt=""/><div class="port-overlay"><span class="port-cat-badge">Directing</span></div></div><div class="port-body"><div class="port-title">TechFest 2024 — Lead Director</div><div class="port-desc">Directed a 3-day annual technology festival with 2,000+ attendees, managing stage production, speaker coordination, and digital media output.</div><div class="port-tags"><span class="port-tag">Event Direction</span><span class="port-tag">Production</span></div></div></div>
-        <div class="port-card fade-in fade-in-delay-1" data-cat="directing"><div class="port-thumb"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=500&q=80" alt=""/><div class="port-overlay"><span class="port-cat-badge">Directing</span></div></div><div class="port-body"><div class="port-title">Neon Horizon — Short Film</div><div class="port-desc">A 12-minute neo-noir short film exploring surveillance and identity in a near-future city, screened at three independent film showcases.</div><div class="port-tags"><span class="port-tag">Cinematography</span><span class="port-tag">Direction</span><span class="port-tag">Editing</span></div></div></div>
-      </div>
+      <!-- Portfolio cards dirender dinamis oleh script.js -->
+      <div class="portfolio-grid" id="portfolio-grid"></div>
     </div>
   </section>
 
@@ -119,8 +112,9 @@
           <div class="section-label">Latest Writing</div>
           <h2 class="section-title">From the Blog</h2>
         </div>
-        <button onclick="openBlog(0)" class="btn-secondary" style="flex-shrink:0">View All Posts →</button>
+        <button onclick="openBlog(posts[0]?.id)" class="btn-secondary" style="flex-shrink:0">View All Posts →</button>
       </div>
+      <!-- Blog cards dirender dinamis oleh script.js -->
       <div class="blog-grid" id="blog-cards"></div>
     </div>
   </section>
@@ -158,9 +152,9 @@
   </section>
 
   <footer>
-    <div class="footer-logo" onclick="goHome()">YourName.</div>
-    <p class="footer-text">© 2025 Alex Rivera. Crafted with code, caffeine, and curiosity.</p>
-    <p class="footer-text" style="font-size:.75rem">Built with HTML · Tailwind · Vanilla JS</p>
+    <div class="footer-logo" onclick="goHome()">AXIS.</div>
+    <p class="footer-text">© 2025 Ferdi. Crafted with code, caffeine, and curiosity.</p>
+    <p class="footer-text" style="font-size:.75rem">Built with HTML · Tailwind · Vanilla JS · Supabase</p>
   </footer>
 </div><!-- /main-site -->
 
